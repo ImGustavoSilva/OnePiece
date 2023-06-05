@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    overflow: hidden;
+    background: linear-gradient(#1F242B 30%, #221E1D);
+}
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("http://hdqwalls.com/wallpapers/one-piece-anime-artwork-i6.jpg") cover;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    background-size: contain;
+}
+body::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://wallpaper29.files.wordpress.com/2016/09/one-piece-3-wallpaper-1600x900.jpg") no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-size: contain;
+}
+.container{
+    display: flex;
+}
+.flip-card{
+    margin: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.frente, .verso{
+    width: 280px;
+    min-height: 600px;
+    height: auto;
+    background-color: #000;
+    background-image: url("https://tse1.mm.bing.net/th?id=OIP.Ut0x_vpy8TBA2dFkIYuWwQHaFx&pid=Api&P=0");
+    background-size: cover;
+    background-position: center;
+    margin: 25px;
+    text-align: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.9s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.flip-card:nth-of-type(2) .frente,
+.flip-card:nth-of-type(2) .verso{
+    background-image: url("https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/09/Monkey-D-Luffy-One-Piece.webp?fit=1240%2C1016&ssl=1");
+}
+.flip-card:nth-of-type(3) .frente,
+.flip-card:nth-of-type(3) .verso{
+    background-image: url("https://i.pinimg.com/originals/c5/a9/68/c5a968eb0a92b427ca26646cf55526bb.jpg");
+}
+.frente{
+    transform: rotateY(0deg);
+}
+.verso{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(250deg);
+}
+.frente::after,
+.verso::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    border-radius: 20px;
+}
+.frente .inner,
+.verso .inner{
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    font-family:'Caveat', cursive;;
+    top: 50%;
+    transform: translate(-50%) translateZ(20px) scale(0.99);
+    z-index: 2;
+}
+.inner .icone{
+    width: 90px;
+    margin-bottom: 5px;
+}
+.inner h3{
+    margin-bottom: 8px;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 10px;
+    text-transform: capitalize;
+}
+.inner p{
+    color: #FFFFFF;
+    font-size: 27px;
+    line-height: 28px;
+}
+.flip-card:hover .frente{
+    transform: rotateY(-100deg);
+}
+.flip-card:hover .verso{
+    transform: rotateY(0deg);
+}
+.sanji{
+    color: #FAFE02;
+}
+.luffy{
+    color: #FE6602;
+}
+.zoro{
+    color: #0DE72E;
+}
